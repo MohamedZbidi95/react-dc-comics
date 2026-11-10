@@ -1,16 +1,31 @@
-# React + Vite
+# DC Comics – React
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A clone of the DC Comics homepage, built with React and Vite as an exercise for the Boolean Full-Stack Web Developer course.
 
-Currently, two official plugins are available:
+![Screenshot of the page](screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies
 
-## React Compiler
+- React
+- Vite
+- JavaScript (ES6+)
+- CSS3 (Flexbox)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Project structure
 
-## Expanding the Oxlint configuration
+- `src/components/` – one file per component: `AppHeader`, `AppMain`, `AppBuyBar`, `AppFooter`
+- `src/data/` – the arrays used to generate the content (comics, navbar links, footer links, icons)
+- `public/img/` – static images
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## What I learned
+
+- How to create a React project with Vite and run it with `npm run dev`
+- How to split a page into components and use `import` / `export default`
+- How to write JSX: one parent element, `className`, `{ }` for JavaScript values
+- How to generate lists from arrays with `.map()` and why every item needs a `key`
+- How to render nested data (footer columns with their own lists of links)
+
+## How to run
+
+    npm install
+    npm run dev
