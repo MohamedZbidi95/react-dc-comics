@@ -1,0 +1,222 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    /* width e height includono padding e border: calcoli delle colonne più semplici */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Header */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+
+.logo {
+    height: 80px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #1c1c1c;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    color: #0282f9;
+}
+
+/* Main */
+.app-main {
+    background-color: #1c1c1c;
+    color: white;
+}
+
+.jumbotron {
+    height: 400px;
+    background-image: url('/img/jumbotron.jpg');
+    background-size: cover;
+    background-position: top center;
+}
+
+.comics-section {
+    /* riferimento per .section-label */
+    position: relative;
+    padding: 60px 0 30px;
+    text-align: center;
+}
+
+.section-label {
+    position: absolute;
+    /* metà dell'altezza sopra il bordo della sezione */
+    top: -25px;
+    left: 0;
+    background-color: #0282f9;
+    padding: 10px 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.comics-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 20px;
+    text-align: left;
+}
+
+.comic-card {
+    /* 6 per riga: tolgo i 5 gap da 20px e divido lo spazio rimasto */
+    width: calc((100% - 5 * 20px) / 6);
+}
+
+.comic-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    /* le copertine hanno il titolo in alto: tengo quella parte */
+    object-position: top;
+}
+
+.comic-card h3 {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.btn-load {
+    margin-top: 40px;
+    padding: 10px 50px;
+    border: none;
+    background-color: #0282f9;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Buy bar */
+.buy-bar {
+    background-color: #0282f9;
+    color: white;
+    padding: 50px 0;
+}
+
+.buy-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.buy-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.buy-list img {
+    height: 50px;
+}
+
+/* Footer */
+.footer-top {
+    background-image: url('/img/footer-bg.jpg');
+    background-size: cover;
+    /* il logo è più alto del footer: taglio quello che sborda */
+    overflow: hidden;
+}
+
+.footer-top-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-columns {
+    /* le colonne si riempiono dall'alto e vanno a capo quando finisce l'altezza */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 380px;
+    gap: 20px 30px;
+    padding: 40px 0;
+}
+
+.footer-column h3 {
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column a {
+    color: #959595;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.footer-logo {
+    height: 450px;
+}
+
+.footer-bottom {
+    background-color: #303030;
+    padding: 30px 0;
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-signup {
+    padding: 15px;
+    background: none;
+    border: 2px solid #0282f9;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social span {
+    color: #0282f9;
+    font-weight: bold;
+    text-transform: uppercase;
+}
